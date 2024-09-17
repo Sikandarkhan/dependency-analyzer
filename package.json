@@ -25,5 +25,13 @@
   },
   "author": "sikandarkhan",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Sikandarkhan/dependency-analyzer/issues"
+  },
+  "homepage": "https://github.com/Sikandarkhan/dependency-analyzer"
+
 }
