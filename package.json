@@ -1,0 +1,25 @@
+{
+  "name": "dependency-analyzer",
+  "version": "1.0.0",
+  "description": "Analyze and optimize project dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "dependancy-analyser",
+    "nodejs",
+    "nodeapp"
+  ],
+  "dependencies": {
+    "commander": "^8.3.0",
+    "d3": "^7.4.4",
+    "depcheck": "^1.2.2",
+    "license-checker": "*",
+    "npm": "^10.8.3",
+    "snyk": "^1.1293.1"
+  },
+  "author": "sikandarkhan",
+  "license": "MIT",
+  "type": "module"
+}
