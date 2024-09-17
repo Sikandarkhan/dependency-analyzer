@@ -4,7 +4,8 @@
   "description": "Analyze and optimize project dependencies",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm run start"
   },
   "keywords": [
     "dependancy-analyser",
