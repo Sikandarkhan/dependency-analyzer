@@ -1,10 +1,13 @@
 import { Command } from 'commander';
 import depcheck from 'depcheck';
-import * as d3 from 'd3';
+// import * as d3 from 'd3';
 import licenseChecker from 'license-checker';
 import fs from 'fs/promises';
 import path from 'path';
 import { exec } from 'child_process';
+import { JSDOM }  from 'jsdom';
+ import d3 from 'd3-node';
+
 
 // Initialize the Commander program
 const program = new Command();
@@ -21,33 +24,43 @@ program
 // Main function to route the commands
 const main = async () => {
   const commands = program.args;
-
-  if (commands.includes('graph')) {
+  if (program.opts().graph) {
     await generateGraph();
-  } else if (commands.includes('unused')) {
+  } else if (program.opts().unused) {
     await detectUnused();
-  } else if (commands.includes('scan')) {
+  } else if (program.opts().scan) {
     await scanSecurity();
-  } else if (commands.includes('license')) {
+  } else if (program.opts().license) {
     await checkLicense();
-  } else {
-    console.error("No valid command provided. Use --help for available options.");
   }
+//   if (commands.includes('graph')) {
+//     await generateGraph();
+//   } else if (commands.includes('unused')) {
+//     await detectUnused();
+//   } else if (commands.includes('scan')) {
+//     await scanSecurity();
+//   } else if (commands.includes('license')) {
+//     await checkLicense();
+//   } else {
+//     console.error("No valid command provided. Use --help for available options.");
+//   }
 };
 
 // Execute the main function and catch any errors
 main().catch(console.error);
 
+// const d3 = require('d3-node')();
+
 // Generate dependency graph using D3
 async function generateGraph() {
-  const dependencies = await getDependencies();
-  const nodes = dependencies.map(dep => ({ id: dep.name }));
-  const links = dependencies.map(dep => ({ source: dep.name, target: dep.dependencies?.[0]?.name || '' }));
-
-  const svg = d3.select('body')
-    .append('svg')
-    .attr('width', 800)
-    .attr('height', 600);
+    const dependencies = await getDependencies();
+    const nodes = dependencies.map(dep => ({ id: dep.name }));
+    const links = dependencies.map(dep => ({ source: dep.name, target: dep.dependencies?.[0]?.name || '' }));
+  
+    const svg = d3.select('body')
+      .append('svg')
+      .attr('width', 800)
+      .attr('height', 600);
 
   const simulation = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links).id(d => d.id))

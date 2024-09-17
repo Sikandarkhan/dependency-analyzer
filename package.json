@@ -14,7 +14,11 @@
   "dependencies": {
     "commander": "^8.3.0",
     "d3": "^7.4.4",
+    "d3-node": "^3.0.0",
+    "d3-selection": "^3.0.0",
+    "d3-selection-multi": "^1.0.1",
     "depcheck": "^1.2.2",
+    "jsdom": "^25.0.0",
     "license-checker": "*",
     "npm": "^10.8.3",
     "snyk": "^1.1293.1"
