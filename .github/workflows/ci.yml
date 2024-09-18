@@ -30,8 +30,8 @@ jobs:
       - run: |
           mkdir -p build
           echo @sikandarkhan:https://npm.pkg.github.com/ > build/.npmrc
-          echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
+          echo '//npm.pkg.github.com/:_authToken=${GTH_TOKEN}' >> build/.npmrc
       # - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.gth_token}}
