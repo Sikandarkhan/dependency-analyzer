@@ -10,7 +10,8 @@
   "keywords": [
     "dependancy-analyser",
     "nodejs",
-    "nodeapp"
+    "nodeapp",
+    "sikandar"
   ],
   "dependencies": {
     "commander": "^8.3.0",
