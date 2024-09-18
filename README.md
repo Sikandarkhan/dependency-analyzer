@@ -4,9 +4,9 @@
 **Dependency Analyzer** is an npm package that helps developers analyze and optimize their project's dependencies. It provides insights into unused dependencies, security vulnerabilities, and license compatibility, empowering you to streamline and secure your project.
 
 **Features**
-Detect Unused Dependencies: Identifies and lists dependencies that are declared but not used in your project.
-Vulnerability Detection: Scans dependencies for potential security vulnerabilities (requires npm audit).
-License Compatibility: Checks if the dependencies adhere to permissive licenses.
+- Detect Unused Dependencies: Identifies and lists dependencies that are declared but not used in your project.
+- Vulnerability Detection: Scans dependencies for potential security vulnerabilities (requires npm audit).
+- License Compatibility: Checks if the dependencies adhere to permissive licenses.
 
 
 ## Installation
@@ -42,9 +42,9 @@ analyze()
 ```
 Analyzes the current project for the following:
 
-Unused Dependencies: Lists dependencies declared in package.json but not used in the code. \n
-Vulnerable Dependencies: Shows dependencies with security vulnerabilities (using npm audit).
-Incompatible Licenses: Displays dependencies that don't have permissive licenses.
+- Unused Dependencies: Lists dependencies declared in package.json but not used in the code. 
+- Vulnerable Dependencies: Shows dependencies with security vulnerabilities (using npm audit).
+- Incompatible Licenses: Displays dependencies that don't have permissive licenses.
 
 ## Example output**
 ```bash
