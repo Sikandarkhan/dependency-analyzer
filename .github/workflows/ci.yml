@@ -26,7 +26,6 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org/'
-          scope: '@Sikandarkhan'
       - run: |
           mkdir -p build
           echo @sikandarkhan:https://npm.pkg.github.com/ > build/.npmrc
