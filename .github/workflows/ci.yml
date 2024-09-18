@@ -28,6 +28,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
           scope: '@Sikandarkhan'
       - run: |
+          mkdir -p build
           echo @sikandarkhan:https://npm.pkg.github.com/ > build/.npmrc
           echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
       - run: npm ci
