@@ -14,7 +14,7 @@
     "sikandar"
   ],
   "dependencies": {
-    "commander": "^8.3.0",
+    "commander": "^12.1.0",
     "d3": "^7.4.4",
     "d3-node": "^3.0.0",
     "d3-selection": "^3.0.0",
