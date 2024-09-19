@@ -1,0 +1,24 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # For npm dependencies (your Node.js project)
+  - package-ecosystem: "npm" # Ecosystem is npm for Node.js projects
+    directory: "/"           # Location of package.json in the repository root
+    schedule:
+      interval: "weekly"      # Check for updates every week
+    open-pull-requests-limit: 10 # Limit of how many open PRs for updates
+    assignees:
+      - Sikandarkhan  # Automatically assign these PRs to this user
+
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions" # Keep GitHub Action workflows up-to-date
+    directory: "/"                      # Path to the workflow files
+    schedule:
+      interval: "daily"                 # Check for updates daily
+    open-pull-requests-limit: 5         # Limit open PRs for actions
+    assignees:
+      - Sikandarkhan
